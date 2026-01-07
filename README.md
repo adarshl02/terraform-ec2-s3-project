@@ -44,12 +44,6 @@ If you switch to a remote backend, follow Terraform's instructions to migrate st
 - Use `prevent_destroy` lifecycle only on truly critical resources to avoid accidental deletion, and pair it with documented runbooks.
 - When experimenting, prefer workspaces or a sandbox account and destroy resources after testing: `terraform destroy`.
 
----
 
-If you want, I can:
 
-- Convert tags to a single `var.common_tags` default and reapply it across the codebase.
-- Add an example `backend` configuration and a short migration guide in the README.
-- Run `terraform plan` here (requires AWS credentials) or show the exact commands to run locally.
 
-Files of interest: [iam.tf](iam.tf), [s3.tf](s3.tf), [compute.tf](compute.tf), [network.tf](network.tf), [variables.tf](variables.tf)
